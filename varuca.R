@@ -1,6 +1,8 @@
+#install.packages("arules")
 #install.packages("arulesViz")
 #install.packages("manipulate")
 
+library("arules")
 library("arulesViz")
 library("MASS")
 

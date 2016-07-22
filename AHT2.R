@@ -32,5 +32,3 @@ AHT2 <- function(AT){
   
   return(ATS)
 }
-
-
