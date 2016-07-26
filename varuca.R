@@ -1,21 +1,18 @@
-#install.packages("arules")
-#install.packages("arulesViz")
-#install.packages("manipulate")
+require(arules)
+require(MASS)
+require(manipulate)
 
-library("arules")
-library("arulesViz")
-library("MASS")
-
+# read data
 #AD <- read.csv("questionnaire.csv",row.names=1)
 #ML <- read.csv("monitor.csv",row.names=1)
-attach(ML)
 #QD <- read.csv("Content.csv",row.names=1)
+# .Rdata contains these data
+attach(ML)
 MC="Media"
 
 source("AP.R")
 AP(Q="Q15",Cex=1,As=25,Ms=50,Supp=0.01,Conf=0.1,Lift=1.3,l=2,Lhs="M")
 
-library("manipulate")
 manipulate(AP(Q,Cex,As,Ms,supp,conf,lift,2,Lhs),
            Q=picker(as.list(row.names(QD[QD[,1]=="MA",])),initial="Q15"),
            Lhs=picker("M","A"),
