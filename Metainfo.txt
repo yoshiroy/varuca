@@ -13,4 +13,6 @@ Author[New]:              'Sanetoshi Yamada and Yoshiro Yamamoto'
 
 Submitted:                '2016-07-18, Yoshiro Yamamoto'
 
+Datafile :                '.RData'
+
 Output:                   'Plot of the association rule plot using the biplot of the correspondence analysis.'
